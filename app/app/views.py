@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from app.forms import UserForm,UserProfileInfoForm
+from app.forms import UserForm, UserProfileInfoForm
 
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
@@ -69,7 +69,7 @@ def register(request):
 
         else:
             # One of the forms was invalid if this else gets called.
-            print(user_form.errors,profile_form.errors)
+            print(user_form.errors, profile_form.errors)
 
     else:
         # Was not an HTTP post so we just render the forms as blank.
@@ -78,10 +78,15 @@ def register(request):
 
     # This is the render and context dictionary to feed
     # back to the registration.html file page.
-    return render(request,'app/registration.html',
-                          {'user_form':user_form,
-                           'profile_form':profile_form,
-                           'registered':registered})
+    return render(
+        request,
+        'app/registration.html',
+        {
+            'user_form': user_form,
+            'profile_form': profile_form,
+            'registered': registered,
+        },
+    )
 
 
 def user_login(request):

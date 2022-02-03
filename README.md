@@ -42,6 +42,7 @@ Please follow the next instructions to create fresh app:
 django-admin startproject project_name
 cd project_name 
 django-admin startapp project_app
+python app/manage.py createsuperuser
 ```
 
 ### DB migration
@@ -72,7 +73,8 @@ If you are interested to add your ideas into project please follow next simple s
 1. Clone the repository
 2. Configure `git` for the first time after cloning with your `name` and `email`
 3. `pip install -r requirements.txt` to install all project dependencies
-4. Create your feature branch (`git checkout -b feature/fooBar`)
-5. Commit your changes (`git commit -am 'Add some fooBar'`)
-6. Push to the branch (`git push origin feature/fooBar`)
-7. Create a new Pull Request
+4. `pip install -r requirements-dev.txt` to install all project dev dependencies
+5. Create your feature branch (`git checkout -b feature/fooBar`)
+6. Commit your changes (`git commit -am 'Add some fooBar'`)
+7. Push to the branch (`git push origin feature/fooBar`)
+8. Create a new Pull Request
