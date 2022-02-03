@@ -22,6 +22,8 @@
 
 ## Usage
 
+Please check deployed app at [http://djangobasics.pythonanywhere.com](http://djangobasics.pythonanywhere.com) web site.
+
 ### Quick start
 
 ```
