@@ -35,6 +35,31 @@ python app/manage.py runserver
 
 Then please open `http://127.0.0.1:8000` endpoint in the browser.
 
+## Deployment
+
+[PythonAnywhere](https://www.pythonanywhere.com) platform is used for deployment.
+
+- Open https://www.pythonanywhere.com
+- Go to bash console
+- Execute `mkvirtualenv --python=python3.7 dj`
+  ```bash
+  mkvirtualenv --python=python3.7 dj
+  git clone https://github.com/vyahello/django-login-template.git
+  cd django-login-template
+  pip install -r requirements.txt
+  python app/manage.py migrate
+  python app/manage.py makemigrations app
+  python app/manage.py createsuperuser
+  ```
+- Go to dashboard -> web -> add new app 
+- Go to manual configuration 
+- Configure `Virtualenv` -> `/home/djangoBasics/.virtualenvs/dj`
+- Configure `Source code` -> `/home/djangoBasics/django-template/app`
+- Edit wsgi file as described in [wsgi.py](wsgi.py)
+- Add 'djangoBasics.pythonanywhere.com' to `ALLOWED_HOSTS` in [settings.py](app/server/settings.py) and set DEBUG = True 
+- Add '/static/admin' and '/home/djangoBasics/.virtualenvs/dj/lib/python3.7/site-packages/django/contrib/admin/static/admin' dir to Static files section
+- Add '/static' and '/home/djangoBasics/django-template/app/static' dir to Static files section
+
 ## Development notes
 
 ### Startup 
