@@ -1,7 +1,7 @@
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-# Django template
+# Django login template
 
 > Describes a simple project template to build basic login & registering functionality using django framework.
 > 
@@ -27,8 +27,8 @@ Please check deployed app at [http://djangobasics.pythonanywhere.com](http://dja
 ### Quick start
 
 ```
-git clone git@github.com:vyahello/django-template.git
-cd django-template
+git clone git@github.com:vyahello/django-login-template.git
+cd django-login-template
 pip install -r requirements.txt
 python app/manage.py runserver
 ```
